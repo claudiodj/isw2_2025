@@ -59,6 +59,12 @@ public class clienteTest {
     });
 
 
+    assertEquals("5491199667711", cli.getTelefono());
+
+    cli.setTelefono("1144514170");
+
+    assertEquals("1144514170", cli.getTelefono());
+
     }
 
     @Test

@@ -6,6 +6,8 @@ public class cliente {
     String apellido;
     int dni;
     String telefono;
+
+    public cliente(){};
     
     public cliente(String nombre, String apellido, int dni, String telefono) {
         this.nombre = nombre;
@@ -40,7 +42,7 @@ public class cliente {
 
     public String getTelefono() {
         try {
-            int demora = 3000; // en milisegundos
+            int demora = 1500; // en milisegundos
             System.out.println("Inicio demora de " + demora/1000 + " segundos...");
             Thread.sleep(demora);
             System.out.println("... fin demora de " + demora/1000 + " segundos");
