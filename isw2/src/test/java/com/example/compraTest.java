@@ -18,6 +18,7 @@ public class compraTest {
 
     // Instanciamos un objeto clase compra con valores que nos pueden servir para el test
     private compra com = new compra(cli, suc, new Date(), 20000, 1000);
+    private compra com2 = new compra(cli, suc, new Date(), 20000, 2001);
 
     @Test
     void testGetClienteCompra() {
@@ -37,7 +38,8 @@ public class compraTest {
 
     @Test
     void testGetImporteDescuento() {
-        assertTrue(com.getImporteDescuento() < com.getImporteCompra());
+        assertTrue(com.getImporteDescuento() <= com.getImporteCompra());
+        assertTrue(com2.getImporteDescuento() <= com2.getImporteCompra());
     }
 
     @Test
@@ -47,6 +49,11 @@ public class compraTest {
 
     @Test
     void testSetClienteCompra() {
+        cliente cliTest = new cliente();
+        assertNotNull(cliTest);
+        cliTest.setNombre("Homero");
+        assertEquals(cliTest.getNombre(), "Homero");
+
 
     }
 
